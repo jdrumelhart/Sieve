@@ -1,1 +1,2 @@
 # Sieve
+This project implements three different sieves for determining all primes below a given integer. The three sieves consist of the ancient Sieve of Erastothenes, Sieve of Atkin, and Sieve of Sundaram.
