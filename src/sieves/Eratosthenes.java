@@ -5,13 +5,16 @@ import java.util.HashMap;
 public class Eratosthenes extends Sieve {
 	
 	@Override
-	public void primes(int l) {
+	public HashMap<Integer, Boolean> primes(int l) {
 		a = fillMap(l);
 		for(int i = 2; i < Math.sqrt(l); i++) {
 			if(a.get(i)) {
-			//	for()
+				for(int j = i; j < i * i; j = j + i) {
+					a.put(j, false);
+				}
 			}
 		}
+		return a;
 	}
 	
 	@Override

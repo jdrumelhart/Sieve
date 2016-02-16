@@ -14,7 +14,7 @@ public abstract class Sieve {
 		return f;
 	}
 	
-	public abstract void primes(int l);
+	public abstract HashMap<Integer, Boolean> primes(int l);
 	
 	public abstract int getLastTime();
 	
