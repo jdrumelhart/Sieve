@@ -4,6 +4,9 @@ import java.util.HashMap;
 
 public class Eratosthenes extends Sieve {
 	
+	public Eratosthenes() {
+		super();
+	}
 	@Override
 	public HashMap<Integer, Boolean> primes(int l) {
 		a = fillMap(l);
@@ -15,12 +18,6 @@ public class Eratosthenes extends Sieve {
 			}
 		}
 		return a;
-	}
-	
-	@Override
-	public int getLastTime() {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 
 	@Override

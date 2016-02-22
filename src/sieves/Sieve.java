@@ -4,6 +4,9 @@ import java.util.HashMap;
 
 public abstract class Sieve {
 	
+	private int lastTime;
+	private int fastTime;
+	private int timesRun;
 	public HashMap<Integer, Boolean> a;
 	
 	public static HashMap<Integer, Boolean> fillMap(int l) {
@@ -13,12 +16,24 @@ public abstract class Sieve {
 		}
 		return f;
 	}
-	
+	public Sieve() {
+		lastTime = 0;
+		fastTime = 0;
+		timesRun = 0;
+	}
 	public abstract HashMap<Integer, Boolean> primes(int l);
 	
-	public abstract int getLastTime();
+	public int getLastTime() {
+		return lastTime;
+	}
 	
-	public abstract int getTimesRun();
+	public int getTimesRun() {
+		return timesRun;
+	}
 	
 	public abstract int getLastMemory();
+
+	public int getFastestTime() {
+		return fastTime;
+	}
 }
