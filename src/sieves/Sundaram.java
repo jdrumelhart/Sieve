@@ -2,21 +2,18 @@ package sieves;
 
 import java.util.HashMap;
 
-public class Eratosthenes implements Sieve {	
-	public Eratosthenes() {
-	}
+public class Sundaram implements Sieve {
+
 	@Override
 	public HashMap<Integer, Boolean> primes(int l) {
-		HashMap<Integer, Boolean> a;
-		a = Sieve.fillMap(l);
-		for(int i = 2; i < Math.sqrt(l); i++) {
-			if(a.get(i)) {
-				for(int j = i; j < i * i; j = j + i) {
-					a.put(j, false);
-				}
-			}
-		}
-		return a;
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getLastTime() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
@@ -30,14 +27,11 @@ public class Eratosthenes implements Sieve {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	@Override
-	public int getLastTime() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
 	@Override
 	public int getFastestTime() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
 }
