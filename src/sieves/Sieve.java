@@ -11,7 +11,7 @@ public interface Sieve {
 		return f;
 	}
 	
-	public HashMap<Integer, Boolean> primes(int l);
+	public HashMap<Integer, Boolean> primes();
 	public int getLastTime();
 	public int getTimesRun();
 	public int getLastMemory();
