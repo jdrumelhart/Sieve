@@ -1,5 +1,6 @@
 package main;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import sieves.*;
@@ -7,7 +8,7 @@ import sieves.*;
 public class Main {
 	public static void main(String[] args) {
 		Eratosthenes e = new Eratosthenes();
-		HashMap<Integer,Boolean> emap = e.primes();
+		ArrayList<Integer> emap = e.primes();
 		
 	}
 }
