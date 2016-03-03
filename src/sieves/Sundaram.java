@@ -1,5 +1,6 @@
 package sieves;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Sundaram implements Sieve {
@@ -15,14 +16,15 @@ public class Sundaram implements Sieve {
 	}
 	
 	@Override
-	public HashMap<Integer, Boolean> primes() {
-		HashMap<Integer, Boolean> a;
-		a = Sieve.fillMap(size);
+	public ArrayList<Integer> primes() {
+		int internalSize = size / 2 + 2;
+		ArrayList<Integer> a;
+		a = Sieve.fillMap(internalSize);
 		int i = 0;
 		int j = 0;
 		boolean lastI = false;
-		while(i <= size && j <= size && (i + j + 2*i*j) <= size) {
-			while(a.remove(i + j + 2*i*j));
+		while(i <= size && j <= internalSize && (i + j + 2*i*j) <= internalSize) {
+			while(a.remove(new Integer(i + j + 2*i*j)));
 			if(lastI) {
 				j++;
 				lastI = true;
@@ -32,7 +34,11 @@ public class Sundaram implements Sieve {
 				lastI = false;
 			}
 		}
-		return;
+		for(Integer o:a) {
+			a.remove(o);
+			a.add(new Integer(o.intValue() * 2 + 1));
+		}
+		return a;
 	}
 
 	@Override

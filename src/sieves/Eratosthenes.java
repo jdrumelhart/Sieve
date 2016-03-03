@@ -1,5 +1,6 @@
 package sieves;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Eratosthenes implements Sieve {	
@@ -14,13 +15,13 @@ public class Eratosthenes implements Sieve {
 		this.size = size;
 	}
 	@Override
-	public HashMap<Integer, Boolean> primes() {
-		HashMap<Integer, Boolean> a;
+	public ArrayList<Integer> primes() {
+		ArrayList<Integer> a;
 		a = Sieve.fillMap(size);
 		for(int i = 2; i < Math.sqrt(size); i++) {
-			if(a.get(i)) {
+			if(a.contains(i)) {
 				for(int j = i; j < i * i; j = j + i) {
-					a.put(j, false);
+					a.remove(j);
 				}
 			}
 		}
