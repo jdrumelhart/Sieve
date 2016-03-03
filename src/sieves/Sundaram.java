@@ -1,8 +1,6 @@
 package sieves;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-
 public class Sundaram implements Sieve {
 
 	private int size = 0;

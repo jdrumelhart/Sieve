@@ -1,8 +1,6 @@
 package sieves;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-
 public interface Sieve {
 	public static ArrayList<Integer> fillMap(int l) {
 		ArrayList<Integer> f = new ArrayList<Integer>(l - 2);
