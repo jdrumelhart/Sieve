@@ -1,7 +1,6 @@
 package sieves;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Eratosthenes implements Sieve {	
 	
