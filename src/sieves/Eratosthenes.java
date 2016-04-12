@@ -1,26 +1,26 @@
 package sieves;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Eratosthenes implements Sieve {	
 	
-	private int size = 0;
+	private int length = 0;
 	
 	public Eratosthenes() {
-		size = 100;
+		length = 100;
 	}
 	
 	public Eratosthenes(int size) {
-		this.size = size;
+		length = size;
 	}
 	@Override
-	public ArrayList<Integer> primes() {
-		ArrayList<Integer> a;
-		a = Sieve.fillMap(size);
-		for(int i = 2; i < Math.sqrt(size); i++) {
-			if(a.contains(i)) {
-				for(int j = i; j < i * i; j = j + i) {
-					a.remove(j);
+	public HashMap<Integer, Boolean> primes() {
+		HashMap<Integer, Boolean> a = Sieve.fillMap(length);
+		for(int i = 2; i < (int)Math.sqrt(length); i++) {
+			if(a.get(i)) {
+				for(int j = i * i; j < length; j += i) {
+					a.put(j, false);
 				}
 			}
 		}

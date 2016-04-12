@@ -1,16 +1,17 @@
 package sieves;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 public interface Sieve {
-	public static ArrayList<Integer> fillMap(int l) {
-		ArrayList<Integer> f = new ArrayList<Integer>(l - 2);
-		for(int i = 0; i < l - 2; i++) {
-			f.add(i+2);
+	public static HashMap<Integer, Boolean> fillMap(int l) {
+		HashMap<Integer, Boolean> f = new HashMap<Integer, Boolean>(l - 2);
+		for(int i = 2; i < l + 1; i++) {
+			f.put(i, true);
 		}
 		return f;
 	}
 	
-	public ArrayList<Integer> primes();
+	public HashMap<Integer, Boolean> primes();
 	public int getLastTime();
 	public int getTimesRun();
 	public int getLastMemory();
