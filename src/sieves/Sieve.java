@@ -1,6 +1,5 @@
 package sieves;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 public interface Sieve {
 	public static HashMap<Integer, Boolean> fillMap(int l) {
@@ -12,8 +11,5 @@ public interface Sieve {
 	}
 	
 	public HashMap<Integer, Boolean> primes();
-	public int getLastTime();
-	public int getTimesRun();
-	public int getLastMemory();
-	public int getFastestTime();
+	public long getLastTime();
 }
