@@ -1,6 +1,8 @@
 package main;
 
 
+import org.jfree.data.xy.XYSeries;
+
 import sieves.*;
 
 public class Main {
@@ -9,9 +11,8 @@ public class Main {
 		for(int j = 0; j < 10; j++) {
 			for(int i = 0; i < 10; i++) {
 				Eratosthenes e = new Eratosthenes(1000000);
-				a[i][j] = e.getLastTime();
+				a[j][i] = e.getLastTime();
 			}
 		}
-		//Graph the array
 	}
 }
