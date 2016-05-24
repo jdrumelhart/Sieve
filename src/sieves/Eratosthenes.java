@@ -15,6 +15,10 @@ public class Eratosthenes implements Sieve {
 	public Eratosthenes(int size) {
 		length = size;
 	}
+	
+	/**
+	 * Finds all of the primes in a set from 2 to length
+	 */
 	@Override
 	public HashMap<Integer, Boolean> primes() {
 		long startTime = System.nanoTime();
